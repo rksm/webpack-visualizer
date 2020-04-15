@@ -1,0 +1,19 @@
+* webpack visualizer for node
+
+A node.js / command line API version of http://chrisbateman.github.io/webpack-visualizer/
+
+** Usage
+1. Generate a webpack stats json
+2.
+#+begin_src shell
+node dist/index.js --stats /path/to/stats.json --out stats.html --open
+#+end_src
+
+** development
+#+begin_src shell
+npm install
+npm run build
+mkdir -p dist
+cp src/shared/style.css lib/pluginmain.js dist/
+yarn run webpack --config webpack.node.js && node dist/index.js 
+#+end_src
